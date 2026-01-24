@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import Layout from "../../components/Layout";
 import { QrCode as QrCodeIcon } from "lucide-react";
-import QRCode from 'qrcode.react';
+import { QRCodeCanvas } from 'qrcode.react';
 
 const QRGenerator = () => {
   const [text, setText] = useState('');
@@ -108,14 +108,13 @@ const QRGenerator = () => {
             <div className="p-6 bg-black/40 backdrop-blur-xl border border-white/10 rounded-lg flex items-center justify-center">
               {text ? (
                 <div className="text-center" data-testid="qr-preview">
-                  <QRCode
+                  <QRCodeCanvas
                     id="qr-canvas"
                     value={text}
                     size={size}
                     fgColor={fgColor}
                     bgColor={bgColor}
                     level="H"
-                    renderAs="canvas"
                   />
                   <p className="text-sm text-muted-foreground mt-4">
                     Your QR Code

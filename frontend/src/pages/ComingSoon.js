@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Layout from "./components/Layout";
+import Layout from "../components/Layout";
 import { Construction } from "lucide-react";
 
 const ComingSoon = ({ toolName }) => {
