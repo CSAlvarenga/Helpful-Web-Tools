@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
       <header 
         className="fixed top-0 w-full z-50 border-b border-white/5"
         style={{
-          background: 'rgba(0, 0, 0, 0.8)',
+          background: '#000000',
           backdropFilter: 'blur(12px)'
         }}
       >
@@ -50,10 +50,7 @@ const Layout = ({ children }) => {
               <img 
                 src="https://customer-assets.emergentagent.com/job_toolkit-online/artifacts/5ddq4su0_enlarged-logo.png" 
                 alt="Helpful Web Tools Logo"
-                className="h-14 w-14 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
-                style={{
-                  filter: 'drop-shadow(0 0 8px rgba(0, 240, 255, 0.3))'
-                }}
+                className="h-14 w-14"
               />
               <div className="flex flex-col">
                 <span className="text-xl font-heading font-bold tracking-tight text-foreground">
