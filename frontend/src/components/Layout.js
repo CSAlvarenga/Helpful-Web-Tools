@@ -15,26 +15,23 @@ const Layout = ({ children }) => {
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Grid Background */}
+      {/* Hero Background Image - Only on homepage */}
       <div 
-        className="fixed inset-0 z-0 opacity-20"
+        className="fixed inset-0 z-0"
         style={{
-          backgroundImage: 'linear-gradient(to right, #80808012 1px, transparent 1px), linear-gradient(to bottom, #80808012 1px, transparent 1px)',
-          backgroundSize: '24px 24px'
+          backgroundImage: 'url(https://customer-assets.emergentagent.com/job_toolkit-online/artifacts/cq72c9tx_Gemini_Generated_Image_dnnhl0dnnhl0dnnh.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: '0.4'
         }}
       />
-
-      {/* Glow Effects */}
+      
+      {/* Dark Overlay for readability */}
       <div 
-        className="fixed top-0 left-1/4 w-96 h-96 -translate-y-1/2 pointer-events-none z-0"
+        className="fixed inset-0 z-0"
         style={{
-          background: 'radial-gradient(circle at center, rgba(0, 240, 255, 0.15) 0%, transparent 70%)'
-        }}
-      />
-      <div 
-        className="fixed bottom-0 right-1/4 w-96 h-96 translate-y-1/2 pointer-events-none z-0"
-        style={{
-          background: 'radial-gradient(circle at center, rgba(255, 95, 0, 0.15) 0%, transparent 70%)'
+          background: 'linear-gradient(to bottom, rgba(5, 5, 5, 0.7) 0%, rgba(5, 5, 5, 0.9) 100%)'
         }}
       />
 
