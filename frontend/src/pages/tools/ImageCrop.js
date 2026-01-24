@@ -2,7 +2,6 @@ import { useState, useRef } from "react";
 import Layout from "../../components/Layout";
 import { Upload, Download, ZoomIn, ZoomOut, RotateCw, Eye } from "lucide-react";
 import Cropper from "react-cropper";
-import "cropperjs/dist/cropper.css";
 
 const ImageCrop = () => {
   const [selectedFile, setSelectedFile] = useState(null);
