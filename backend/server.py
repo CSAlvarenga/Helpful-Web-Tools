@@ -68,6 +68,91 @@ async def get_status_checks():
     
     return status_checks
 
+@api_router.post("/remove-background")
+async def remove_background(file: UploadFile = File(...)):
+    """
+    Remove background from uploaded image using remove.bg API.
+    """
+    # Validate file type
+    if not file.content_type or not file.content_type.startswith('image/'):
+        raise HTTPException(
+            status_code=400,
+            detail="File must be an image (JPG, PNG, WEBP)"
+        )
+    
+    # Read file content
+    try:
+        content = await file.read()
+        file_size = len(content)
+        
+        # Check file size (25MB limit)
+        if file_size > 25000000:
+            raise HTTPException(
+                status_code=413,
+                detail="File size exceeds maximum of 25MB"
+            )
+        
+        # Get API key from environment
+        api_key = os.environ.get('REMOVE_BG_API_KEY')
+        if not api_key:
+            raise HTTPException(
+                status_code=500,
+                detail="Background removal service not configured"
+            )
+        
+        # Call remove.bg API
+        async with aiohttp.ClientSession() as session:
+            form_data = aiohttp.FormData()
+            form_data.add_field('size', 'auto')
+            form_data.add_field('image_file', content, filename=file.filename)
+            
+            async with session.post(
+                'https://api.remove.bg/v1.0/removebg',
+                data=form_data,
+                headers={'X-Api-Key': api_key},
+                timeout=aiohttp.ClientTimeout(total=60)
+            ) as response:
+                
+                if response.status == 429:
+                    retry_after = response.headers.get('Retry-After', '60')
+                    raise HTTPException(
+                        status_code=429,
+                        detail=f"Rate limit exceeded. Please try again after {retry_after} seconds"
+                    )
+                
+                if response.status != 200:
+                    error_text = await response.text()
+                    logger.error(f"remove.bg API error: {response.status} - {error_text}")
+                    raise HTTPException(
+                        status_code=response.status,
+                        detail=f"Background removal failed: {error_text}"
+                    )
+                
+                # Read processed image
+                processed_image = await response.read()
+                processed_base64 = base64.b64encode(processed_image).decode('utf-8')
+                
+                return {
+                    "filename": file.filename,
+                    "processed_image": processed_base64,
+                    "original_size": file_size,
+                    "processed_size": len(processed_image),
+                    "status": "success"
+                }
+    
+    except aiohttp.ClientError as e:
+        logger.error(f"Network error calling remove.bg API: {str(e)}")
+        raise HTTPException(
+            status_code=503,
+            detail="Failed to connect to background removal service"
+        )
+    except Exception as e:
+        logger.error(f"Error processing image: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error processing image: {str(e)}"
+        )
+
 # Include the router in the main app
 app.include_router(api_router)
 
