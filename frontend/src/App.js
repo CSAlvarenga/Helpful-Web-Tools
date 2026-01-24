@@ -28,6 +28,9 @@ import WordCounter from "./pages/tools/WordCounter";
 // Daily Utilities
 import PasswordGenerator from "./pages/tools/PasswordGenerator";
 
+// Creator Tools
+import YoutubeThumbnail from "./pages/tools/YoutubeThumbnail";
+
 // Math & Finance
 import PercentageCalculator from "./pages/tools/PercentageCalculator";
 import DiscountCalculator from "./pages/tools/DiscountCalculator";
@@ -77,6 +80,9 @@ function App() {
           <Route path="/tools/date-calculator" element={<DateCalculator />} />
           <Route path="/tools/age-calculator" element={<AgeCalculator />} />
           <Route path="/tools/loan-calculator" element={<LoanCalculator />} />
+          
+          {/* Creator Tools */}
+          <Route path="/tools/youtube-thumbnail" element={<YoutubeThumbnail />} />
           
           {/* Daily Utilities */}
           <Route path="/tools/password-generator" element={<PasswordGenerator />} />
