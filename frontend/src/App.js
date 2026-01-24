@@ -14,6 +14,7 @@ import BackgroundRemover from "./pages/tools/BackgroundRemover";
 // PDF & Document Tools
 import InvoiceGenerator from "./pages/tools/InvoiceGenerator";
 import PDFMerge from "./pages/tools/PDFMerge";
+import PDFSplit from "./pages/tools/PDFSplit";
 
 // Developer Tools
 import QRGenerator from "./pages/tools/QRGenerator";
@@ -45,7 +46,7 @@ function App() {
           
           {/* PDF Tools */}
           <Route path="/tools/pdf-merge" element={<PDFMerge />} />
-          <Route path="/tools/pdf-split" element={<ComingSoon toolName="PDF Split" />} />
+          <Route path="/tools/pdf-split" element={<PDFSplit />} />
           <Route path="/tools/pdf-to-image" element={<ComingSoon toolName="PDF to Image" />} />
           <Route path="/tools/invoice-generator" element={<InvoiceGenerator />} />
           <Route path="/tools/e-signature" element={<ComingSoon toolName="e-Signature" />} />
