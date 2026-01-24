@@ -27,6 +27,13 @@ import WordCounter from "./pages/tools/WordCounter";
 // Daily Utilities
 import PasswordGenerator from "./pages/tools/PasswordGenerator";
 
+// Math & Finance
+import PercentageCalculator from "./pages/tools/PercentageCalculator";
+import DiscountCalculator from "./pages/tools/DiscountCalculator";
+import DateCalculator from "./pages/tools/DateCalculator";
+import AgeCalculator from "./pages/tools/AgeCalculator";
+import LoanCalculator from "./pages/tools/LoanCalculator";
+
 // Placeholder for tools not yet implemented
 import ComingSoon from "./pages/ComingSoon";
 
