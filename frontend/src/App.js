@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage";
 import ImageResize from "./pages/tools/ImageResize";
 import ImageCrop from "./pages/tools/ImageCrop";
 import ImageCompressor from "./pages/tools/ImageCompressor";
+import FormatConverter from "./pages/tools/FormatConverter";
 
 // PDF & Document Tools
 import InvoiceGenerator from "./pages/tools/InvoiceGenerator";
@@ -37,7 +38,7 @@ function App() {
           <Route path="/tools/image-resize" element={<ImageResize />} />
           <Route path="/tools/image-crop" element={<ImageCrop />} />
           <Route path="/tools/image-compressor" element={<ImageCompressor />} />
-          <Route path="/tools/format-converter" element={<ComingSoon toolName="Format Converter" />} />
+          <Route path="/tools/format-converter" element={<FormatConverter />} />
           <Route path="/tools/background-remover" element={<ComingSoon toolName="Background Remover" />} />
           
           {/* PDF Tools */}
