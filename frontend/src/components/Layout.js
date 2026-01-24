@@ -10,6 +10,7 @@ const Layout = ({ children }) => {
     { name: "PDF Tools", path: "/#pdf-tools" },
     { name: "Developer Tools", path: "/#dev-tools" },
     { name: "Text Tools", path: "/#text-tools" },
+    { name: "Math & Finance", path: "/#math-finance" },
     { name: "Daily Utilities", path: "/#utilities" },
   ];
 
