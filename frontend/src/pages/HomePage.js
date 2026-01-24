@@ -112,7 +112,7 @@ const HomePage = () => {
           {/* Tech Stats */}
           <div className="mt-12 grid grid-cols-3 gap-4 max-w-2xl mx-auto">
             <div className="p-4 bg-black/40 backdrop-blur-xl border border-white/10 rounded-lg">
-              <div className="text-3xl font-heading font-bold text-primary" data-testid="stat-tools">25+</div>
+              <div className="text-3xl font-heading font-bold text-primary" data-testid="stat-tools">30+</div>
               <div className="text-sm text-muted-foreground uppercase tracking-wide">Tools</div>
             </div>
             <div className="p-4 bg-black/40 backdrop-blur-xl border border-white/10 rounded-lg">
