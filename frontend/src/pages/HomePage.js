@@ -5,7 +5,7 @@ import {
   FileText, FilePlus, FileSignature, Receipt,
   Code, QrCode, Palette, Hash,
   Type, AlignLeft, Calculator, GitCompare,
-  Lock, Gauge, Timer, Scale
+  Lock, Gauge, Timer, Scale, Percent, DollarSign, Calendar, Cake
 } from "lucide-react";
 
 const HomePage = () => {
