@@ -51,9 +51,9 @@ const Layout = ({ children }) => {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group" data-testid="logo-link">
               <img 
-                src="https://customer-assets.emergentagent.com/job_toolkit-online/artifacts/m1i845iy_Gemini_Generated_Image_l3xqktl3xqktl3xq.png" 
+                src="https://customer-assets.emergentagent.com/job_toolkit-online/artifacts/skp413fm_enlarged-logo.png" 
                 alt="Helpful Web Tools Logo"
-                className="h-10 w-10 transition-transform duration-300 group-hover:scale-110"
+                className="h-12 w-auto transition-transform duration-300 group-hover:scale-110"
               />
               <div className="flex flex-col">
                 <span className="text-xl font-heading font-bold tracking-tight text-foreground">
