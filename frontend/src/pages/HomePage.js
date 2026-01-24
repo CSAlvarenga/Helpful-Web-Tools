@@ -74,6 +74,15 @@ const HomePage = () => {
       ]
     },
     {
+      id: "creator-tools",
+      title: "Creator & Media Tools",
+      description: "Essential tools for content creators",
+      bgImage: "https://images.unsplash.com/photo-1611162617474-5b21e879e113",
+      tools: [
+        { name: "YouTube Thumbnail", icon: Youtube, path: "/tools/youtube-thumbnail", color: "secondary" },
+      ]
+    },
+    {
       id: "utilities",
       title: "Daily Utilities",
       description: "Everyday tools for productivity",
