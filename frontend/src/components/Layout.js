@@ -48,9 +48,12 @@ const Layout = ({ children }) => {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group" data-testid="logo-link">
               <img 
-                src="https://customer-assets.emergentagent.com/job_toolkit-online/artifacts/skp413fm_enlarged-logo.png" 
+                src="https://customer-assets.emergentagent.com/job_toolkit-online/artifacts/5ddq4su0_enlarged-logo.png" 
                 alt="Helpful Web Tools Logo"
-                className="h-12 w-auto transition-transform duration-300 group-hover:scale-110"
+                className="h-14 w-14 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
+                style={{
+                  filter: 'drop-shadow(0 0 8px rgba(0, 240, 255, 0.3))'
+                }}
               />
               <div className="flex flex-col">
                 <span className="text-xl font-heading font-bold tracking-tight text-foreground">
