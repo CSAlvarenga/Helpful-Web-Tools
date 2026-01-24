@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 
 // Image Tools
 import ImageResize from "./pages/tools/ImageResize";
+import ImageCrop from "./pages/tools/ImageCrop";
 import ImageCompressor from "./pages/tools/ImageCompressor";
 
 // PDF & Document Tools
@@ -34,7 +35,7 @@ function App() {
           
           {/* Image Tools */}
           <Route path="/tools/image-resize" element={<ImageResize />} />
-          <Route path="/tools/image-crop" element={<ComingSoon toolName="Image Crop" />} />
+          <Route path="/tools/image-crop" element={<ImageCrop />} />
           <Route path="/tools/image-compressor" element={<ImageCompressor />} />
           <Route path="/tools/format-converter" element={<ComingSoon toolName="Format Converter" />} />
           <Route path="/tools/background-remover" element={<ComingSoon toolName="Background Remover" />} />
