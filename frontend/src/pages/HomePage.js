@@ -61,6 +61,19 @@ const HomePage = () => {
       ]
     },
     {
+      id: "math-finance",
+      title: "Math & Finance Calculators",
+      description: "Calculate percentages, discounts, dates, and loans",
+      bgImage: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c",
+      tools: [
+        { name: "Percentage Calculator", icon: Percent, path: "/tools/percentage-calculator", color: "secondary" },
+        { name: "Discount Calculator", icon: DollarSign, path: "/tools/discount-calculator", color: "secondary" },
+        { name: "Date Calculator", icon: Calendar, path: "/tools/date-calculator", color: "primary" },
+        { name: "Age Calculator", icon: Cake, path: "/tools/age-calculator", color: "primary" },
+        { name: "Loan Calculator", icon: Calculator, path: "/tools/loan-calculator", color: "secondary" },
+      ]
+    },
+    {
       id: "utilities",
       title: "Daily Utilities",
       description: "Everyday tools for productivity",
