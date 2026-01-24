@@ -1,0 +1,124 @@
+{
+  "typography": {
+    "fonts": {
+      "heading": "Rajdhani, sans-serif",
+      "body": "Inter, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "weights": {
+      "heading": "700",
+      "body": "400",
+      "bold": "600"
+    },
+    "sizes": {
+      "h1": "text-5xl md:text-7xl tracking-tight",
+      "h2": "text-4xl md:text-5xl tracking-tight",
+      "h3": "text-2xl md:text-3xl tracking-normal",
+      "body": "text-base md:text-lg leading-relaxed",
+      "small": "text-sm tracking-wide uppercase"
+    },
+    "instructions": "Import 'Rajdhani' (weights 500, 600, 700) and 'JetBrains Mono' from Google Fonts. Use Rajdhani for all headings to give a square, tech-focused look. Use JetBrains Mono for any code snippets, data values, or 'technical' labels."
+  },
+  "colors": {
+    "palette": {
+      "background": "#050505",
+      "foreground": "#FFFFFF",
+      "primary": "#00F0FF",
+      "primary_foreground": "#000000",
+      "secondary": "#FF5F00",
+      "secondary_foreground": "#FFFFFF",
+      "accent": "#1A1A1A",
+      "accent_foreground": "#00F0FF",
+      "muted": "#121212",
+      "muted_foreground": "#A1A1AA",
+      "border": "#333333",
+      "input": "#1A1A1A",
+      "ring": "#00F0FF"
+    },
+    "gradients": {
+      "hero": "linear-gradient(135deg, #050505 0%, #0A0A0A 100%)",
+      "glow_blue": "radial-gradient(circle at center, rgba(0, 240, 255, 0.15) 0%, transparent 70%)",
+      "glow_orange": "radial-gradient(circle at center, rgba(255, 95, 0, 0.15) 0%, transparent 70%)",
+      "card_border": "linear-gradient(to bottom right, rgba(255,255,255,0.1), rgba(255,255,255,0.02))"
+    },
+    "usage": {
+      "background": "Use #050505 as the main page background. Avoid pure black #000000.",
+      "primary": "Use Neon Blue (#00F0FF) for primary actions, active states, and key highlights.",
+      "secondary": "Use Neon Orange (#FF5F00) for secondary actions or to create contrast against the blue.",
+      "text": "Headings in pure White (#FFFFFF). Body text in Muted Foreground (#A1A1AA) to reduce eye strain."
+    }
+  },
+  "layout": {
+    "grid_system": {
+      "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+      "bento_grid": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6",
+      "tool_grid": "grid grid-cols-2 md:grid-cols-4 gap-4"
+    },
+    "spacing": {
+      "section_padding": "py-20 md:py-32",
+      "element_gap": "gap-6 md:gap-8",
+      "internal_padding": "p-6 md:p-8"
+    },
+    "z_index": {
+      "background": "-10",
+      "content": "10",
+      "overlay": "50",
+      "modal": "100"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_15px_rgba(0,240,255,0.5)] transition-all duration-300 font-bold uppercase tracking-wider rounded-sm",
+      "secondary": "bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-[0_0_15px_rgba(255,95,0,0.5)] transition-all duration-300 font-bold uppercase tracking-wider rounded-sm",
+      "outline": "border border-primary/50 text-primary hover:bg-primary/10 hover:border-primary transition-all duration-300 uppercase tracking-wider rounded-sm",
+      "ghost": "hover:bg-white/5 text-foreground transition-all duration-200"
+    },
+    "cards": {
+      "base": "bg-black/40 backdrop-blur-xl border border-white/10 hover:border-primary/50 transition-all duration-300 group relative overflow-hidden rounded-lg",
+      "hover_effect": "group-hover:shadow-[0_0_20px_rgba(0,240,255,0.15)]"
+    },
+    "inputs": {
+      "base": "bg-black/50 border-white/10 focus:border-primary focus:ring-1 focus:ring-primary/50 text-white placeholder:text-white/30 rounded-sm transition-all duration-200"
+    },
+    "navigation": {
+      "header": "fixed top-0 w-full z-50 bg-black/80 backdrop-blur-lg border-b border-white/5",
+      "link": "text-sm font-medium text-muted-foreground hover:text-primary transition-colors uppercase tracking-wide"
+    }
+  },
+  "visual_enhancers": {
+    "glow_effects": {
+      "text_glow": "drop-shadow-[0_0_8px_rgba(0,240,255,0.5)]",
+      "border_glow": "box-shadow: 0 0 10px rgba(0, 240, 255, 0.3)"
+    },
+    "textures": {
+      "grid_overlay": "bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]",
+      "noise": "opacity-20 mix-blend-overlay pointer-events-none fixed inset-0 z-[9999] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"
+    },
+    "animations": {
+      "hover_lift": "hover:-translate-y-1 transition-transform duration-300",
+      "pulse_slow": "animate-pulse duration-[3000ms]"
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_bg": "https://images.unsplash.com/photo-1768330187404-59e46cf222c9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHw0fHxmdXR1cmlzdGljJTIwdGVjaG5vbG9neSUyMGFic3RyYWN0JTIwYmFja2dyb3VuZCUyMG5lb24lMjBibHVlJTIwb3JhbmdlfGVufDB8fHx8MTc2OTI3OTQ3OHww&ixlib=rb-4.1.0&q=85",
+      "developer_tools": "https://images.unsplash.com/photo-1719400471588-575b23e27bd7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwzfHxjcmVhdGl2ZSUyMGRlc2lnbmVyJTIwd29ya2luZyUyMG9uJTIwY29tcHV0ZXIlMjBkYXJrJTIwcm9vbXxlbnwwfHx8fDE3NjkyNzk0ODB8MA&ixlib=rb-4.1.0&q=85",
+      "creative_tools": "https://images.unsplash.com/photo-1589178208772-6f239b7652e9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGRlc2lnbmVyJTIwd29ya2luZyUyMG9uJTIwY29tcHV0ZXIlMjBkYXJrJTIwcm9vbXxlbnwwfHx8fDE3NjkyNzk0ODB8MA&ixlib=rb-4.1.0&q=85",
+      "pdf_tools": "https://images.unsplash.com/photo-1766258959691-3aea033fda2c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwdGVjaG5vbG9neSUyMGFic3RyYWN0JTIwYmFja2dyb3VuZCUyMG5lb24lMjBibHVlJTIwb3JhbmdlfGVufDB8fHx8MTc2OTI3OTQ3OHww&ixlib=rb-4.1.0&q=85",
+      "image_tools": "https://images.unsplash.com/photo-1764258560730-d167e5deda65?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwyfHxmdXR1cmlzdGljJTIwdGVjaG5vbG9neSUyMGFic3RyYWN0JTIwYmFja2dyb3VuZCUyMG5lb24lMjBibHVlJTIwb3JhbmdlfGVufDB8fHx8MTc2OTI3OTQ3OHww&ixlib=rb-4.1.0&q=85"
+    },
+    "icons": {
+      "library": "lucide-react",
+      "style": "stroke-width: 1.5; color: #00F0FF"
+    }
+  },
+  "universal_guidelines": {
+    "theme": "dark",
+    "design_philosophy": "Cyberpunk Utility. Functional but visually striking. High contrast, neon accents, dark backgrounds.",
+    "accessibility": "Ensure all text meets WCAG AA contrast ratios. Use aria-labels for icon-only buttons.",
+    "testing": "All interactive elements MUST have a data-testid attribute (e.g., data-testid='submit-button').",
+    "responsive": "Mobile-first. Ensure touch targets are at least 44px on mobile.",
+    "motion": "Use smooth, tech-like transitions (ease-out). Avoid bouncy or playful animations. Think 'machine precision'."
+  },
+  "instructions_to_main_agent": "1. Implement the 'Rajdhani' font immediately in index.css. 2. Update tailwind.config.js with the neon color palette. 3. Create a 'Layout' component that includes the background grid texture and header. 4. Use the provided image URLs for the category cards. 5. Ensure all Shadcn components are customized to match the dark/neon aesthetic (remove rounded-xl, use rounded-sm or rounded-md, add border glows)."
+}
