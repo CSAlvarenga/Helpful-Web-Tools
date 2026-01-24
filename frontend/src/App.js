@@ -70,6 +70,13 @@ function App() {
           <Route path="/tools/word-counter" element={<WordCounter />} />
           <Route path="/tools/diff-checker" element={<ComingSoon toolName="Diff Checker" />} />
           
+          {/* Math & Finance */}
+          <Route path="/tools/percentage-calculator" element={<PercentageCalculator />} />
+          <Route path="/tools/discount-calculator" element={<DiscountCalculator />} />
+          <Route path="/tools/date-calculator" element={<DateCalculator />} />
+          <Route path="/tools/age-calculator" element={<AgeCalculator />} />
+          <Route path="/tools/loan-calculator" element={<LoanCalculator />} />
+          
           {/* Daily Utilities */}
           <Route path="/tools/password-generator" element={<PasswordGenerator />} />
           <Route path="/tools/unit-converter" element={<ComingSoon toolName="Unit Converter" />} />
