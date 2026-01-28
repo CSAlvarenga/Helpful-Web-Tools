@@ -114,11 +114,14 @@ const Layout = ({ children }) => {
       <footer className="relative z-10 border-t border-white/5 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
-            <p className="text-muted-foreground text-sm">
+            <p className="text-muted-foreground text-sm mb-2">
               © 2025 Helpful Web Tools. Your Swiss Army Knife Online.
             </p>
-            <p className="text-muted-foreground text-xs mt-2">
+            <p className="text-muted-foreground text-sm mb-2">
               All tools run in your browser. No data uploaded to servers.
+            </p>
+            <p className="text-muted-foreground text-sm">
+              Support: <a href="mailto:support@helpfulwebtools.net" className="text-primary hover:text-primary/80 transition-colors">support@helpfulwebtools.net</a>
             </p>
           </div>
         </div>
