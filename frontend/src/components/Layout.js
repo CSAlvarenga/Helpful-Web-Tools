@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          opacity: '0.4'
+          opacity: '0.6'
         }}
       />
       
@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
       <div 
         className="fixed inset-0 z-0"
         style={{
-          background: 'linear-gradient(to bottom, rgba(5, 5, 5, 0.7) 0%, rgba(5, 5, 5, 0.9) 100%)'
+          background: 'linear-gradient(to bottom, rgba(5, 5, 5, 0.5) 0%, rgba(5, 5, 5, 0.7) 100%)'
         }}
       />
 
