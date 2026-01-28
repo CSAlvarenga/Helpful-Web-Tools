@@ -5,6 +5,11 @@ import { useState, useEffect } from "react";
 const Layout = ({ children }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  // Scroll to top when component mounts or children change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [children]);
+
   const categories = [
     { name: "Image Tools", path: "/#image-tools" },
     { name: "PDF Tools", path: "/#pdf-tools" },
