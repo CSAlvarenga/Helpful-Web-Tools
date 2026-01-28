@@ -1,4 +1,5 @@
 from fastapi import FastAPI, APIRouter, File, UploadFile, HTTPException
+from fastapi.responses import Response
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
@@ -152,6 +153,84 @@ async def remove_background(file: UploadFile = File(...)):
             status_code=500,
             detail=f"Error processing image: {str(e)}"
         )
+
+@api_router.get("/sitemap.xml")
+async def generate_sitemap():
+    """
+    Dynamically generate sitemap.xml for all tools and pages.
+    This ensures Google always has the latest list of pages.
+    """
+    
+    base_url = "https://helpfulwebtools.net"
+    current_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    
+    # Define all tool routes
+    tools = [
+        # Image Tools
+        {"path": "/tools/image-resize", "priority": "0.8", "changefreq": "monthly"},
+        {"path": "/tools/image-crop", "priority": "0.8", "changefreq": "monthly"},
+        {"path": "/tools/image-compressor", "priority": "0.8", "changefreq": "monthly"},
+        {"path": "/tools/format-converter", "priority": "0.8", "changefreq": "monthly"},
+        {"path": "/tools/background-remover", "priority": "0.9", "changefreq": "monthly"},
+        
+        # PDF Tools
+        {"path": "/tools/pdf-merge", "priority": "0.8", "changefreq": "monthly"},
+        {"path": "/tools/pdf-split", "priority": "0.8", "changefreq": "monthly"},
+        {"path": "/tools/pdf-to-image", "priority": "0.8", "changefreq": "monthly"},
+        {"path": "/tools/invoice-generator", "priority": "0.8", "changefreq": "monthly"},
+        
+        # Developer Tools
+        {"path": "/tools/qr-generator", "priority": "0.8", "changefreq": "monthly"},
+        
+        # Text Tools
+        {"path": "/tools/case-converter", "priority": "0.7", "changefreq": "monthly"},
+        {"path": "/tools/lorem-ipsum", "priority": "0.7", "changefreq": "monthly"},
+        {"path": "/tools/word-counter", "priority": "0.7", "changefreq": "monthly"},
+        
+        # Math & Finance
+        {"path": "/tools/percentage-calculator", "priority": "0.9", "changefreq": "monthly"},
+        {"path": "/tools/discount-calculator", "priority": "0.9", "changefreq": "monthly"},
+        {"path": "/tools/date-calculator", "priority": "0.8", "changefreq": "monthly"},
+        {"path": "/tools/age-calculator", "priority": "0.8", "changefreq": "monthly"},
+        {"path": "/tools/loan-calculator", "priority": "0.9", "changefreq": "monthly"},
+        
+        # Creator Tools
+        {"path": "/tools/youtube-thumbnail", "priority": "0.9", "changefreq": "monthly"},
+        
+        # Utilities
+        {"path": "/tools/password-generator", "priority": "0.8", "changefreq": "monthly"},
+    ]
+    
+    # Build XML
+    xml_content = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    xml_content += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    
+    # Homepage
+    xml_content += '  <url>\n'
+    xml_content += f'    <loc>{base_url}</loc>\n'
+    xml_content += f'    <lastmod>{current_date}</lastmod>\n'
+    xml_content += '    <changefreq>weekly</changefreq>\n'
+    xml_content += '    <priority>1.0</priority>\n'
+    xml_content += '  </url>\n'
+    
+    # Add all tools
+    for tool in tools:
+        xml_content += '  <url>\n'
+        xml_content += f'    <loc>{base_url}{tool["path"]}</loc>\n'
+        xml_content += f'    <lastmod>{current_date}</lastmod>\n'
+        xml_content += f'    <changefreq>{tool["changefreq"]}</changefreq>\n'
+        xml_content += f'    <priority>{tool["priority"]}</priority>\n'
+        xml_content += '  </url>\n'
+    
+    xml_content += '</urlset>'
+    
+    return Response(
+        content=xml_content,
+        media_type="application/xml",
+        headers={
+            "Cache-Control": "public, max-age=3600"  # Cache for 1 hour
+        }
+    )
 
 # Include the router in the main app
 app.include_router(api_router)
