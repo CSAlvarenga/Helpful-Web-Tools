@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://helpfulwebtools.net/api/sitemap.xml
+
+# Allow all tools to be crawled
+Allow: /tools/
+
+# Disallow admin or private pages (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Crawl-delay (optional, be nice to bots)
+Crawl-delay: 1
