@@ -1462,3 +1462,88 @@ export const eSignatureContent = {
     { name: "Password Generator", path: "/tools/password-generator" }
   ]
 };
+
+export const cssGradientContent = {
+  howTo: {
+    title: "How to Create CSS Gradients",
+    content: [
+      "Our CSS Gradient Generator makes it easy to create beautiful linear and radial gradients for your websites. Design visually, adjust colors and positions, then copy the production-ready CSS code with one click.",
+    ],
+    steps: [
+      "Choose a preset gradient or start with the default colors",
+      "Click on the gradient strip to add new color stops",
+      "Drag the handles to adjust color positions along the gradient",
+      "Use the sidebar controls to fine-tune color, opacity, and position",
+      "Toggle between Linear and Radial gradient types",
+      "Adjust the angle for linear gradients (0-360 degrees)",
+      "Click 'Copy CSS' to copy the generated code to your clipboard"
+    ]
+  },
+  features: {
+    title: "Gradient Generator Features",
+    content: [
+      "CSS gradients are essential for modern web design, creating depth, visual interest, and brand identity. Our tool provides professional-grade gradient creation without requiring any coding knowledge.",
+    ],
+    list: [
+      "Visual gradient editor with real-time preview",
+      "Support for both linear and radial gradients",
+      "Unlimited color stops for complex gradients",
+      "Precise control over color position and opacity",
+      "Drag-and-drop handle positioning",
+      "Quick preset gradients to get started fast",
+      "Random gradient generator for inspiration",
+      "One-click CSS code copying",
+      "Clean, production-ready CSS output",
+      "Mobile-friendly interface with touch support"
+    ]
+  },
+  faq: [
+    {
+      question: "What's the difference between linear and radial gradients?",
+      answer: "Linear gradients transition colors along a straight line at a specified angle (e.g., top to bottom, left to right). Radial gradients transition colors outward from a center point in a circular pattern."
+    },
+    {
+      question: "How many colors can I add to a gradient?",
+      answer: "You can add as many color stops as you need. However, for performance and visual clarity, most designers use 2-5 colors. Click anywhere on the gradient strip to add a new color stop."
+    },
+    {
+      question: "What does the angle setting do?",
+      answer: "The angle controls the direction of linear gradients. 0° goes from bottom to top, 90° goes from left to right, 180° goes from top to bottom, and 270° goes from right to left."
+    },
+    {
+      question: "Can I use transparency in gradients?",
+      answer: "Yes! Use the opacity slider to make any color stop partially or fully transparent. This is great for overlay effects and fading elements into backgrounds."
+    },
+    {
+      question: "Will this CSS work in all browsers?",
+      answer: "Yes, the generated CSS uses standard gradient syntax supported by all modern browsers including Chrome, Firefox, Safari, Edge, and Opera. No vendor prefixes are needed for current browser versions."
+    },
+    {
+      question: "How do I delete a color stop?",
+      answer: "Select the color stop by clicking its handle, then click the 'Delete Stop' button in the sidebar. Note: You must have at least 2 color stops in a gradient."
+    }
+  ],
+  tips: {
+    title: "CSS Gradient Design Tips",
+    content: [
+      "Creating effective gradients requires understanding color theory and design principles. Follow these tips for professional-looking results:"
+    ],
+    list: [
+      "Use complementary colors for vibrant, eye-catching gradients",
+      "Analogous colors (neighbors on the color wheel) create smooth, harmonious transitions",
+      "Subtle gradients (similar colors, low contrast) work well for backgrounds",
+      "Add a middle color stop to create smoother transitions between contrasting colors",
+      "Use transparency to create overlay effects on images",
+      "45° and 135° angles are popular for diagonal gradients",
+      "Radial gradients work great for spotlight effects and buttons",
+      "Test your gradient on both light and dark content to ensure readability",
+      "Keep gradients subtle for professional designs - bold gradients suit creative projects",
+      "Use the Random button for inspiration when you're stuck"
+    ]
+  },
+  relatedTools: [
+    { name: "QR Generator", path: "/tools/qr-generator" },
+    { name: "Image Resize", path: "/tools/image-resize" },
+    { name: "Background Remover", path: "/tools/background-remover" }
+  ]
+};
