@@ -61,7 +61,7 @@ function App() {
           <Route path="/tools/pdf-split" element={<PDFSplit />} />
           <Route path="/tools/pdf-to-image" element={<PDFToImage />} />
           <Route path="/tools/invoice-generator" element={<InvoiceGenerator />} />
-          <Route path="/tools/e-signature" element={<ComingSoon toolName="e-Signature" />} />
+          <Route path="/tools/e-signature" element={<ESignature />} />
           
           {/* Developer Tools */}
           <Route path="/tools/qr-generator" element={<QRGenerator />} />
