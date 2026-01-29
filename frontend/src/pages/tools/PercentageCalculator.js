@@ -196,6 +196,11 @@ const PercentageCalculator = () => {
             </div>
           </div>
         </div>
+
+        {/* SEO Content Section */}
+        <div className="max-w-3xl mx-auto">
+          <ToolContent toolData={percentageCalculatorContent} />
+        </div>
       </div>
     </Layout>
   );
