@@ -40,7 +40,7 @@ Build a modern website called "Helpful Web Tools" with the slogan "Your Swiss Ar
 
 #### Creator Tools
 - YouTube Thumbnail Downloader - Extract video thumbnails
-- Invoice Generator - Create PDF invoices
+- Invoice Generator - Create PDF invoices with company logo support
 
 ### SEO & Monetization (Completed)
 - Dynamic sitemap.xml endpoint
