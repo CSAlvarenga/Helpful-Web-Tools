@@ -1,6 +1,8 @@
 import { useState, useRef } from "react";
 import Layout from "../../components/Layout";
 import { Upload, Download, Image as ImageIcon } from "lucide-react";
+import ToolContent from "../../components/ToolContent";
+import { imageResizeContent } from "../../data/toolContent";
 
 const ImageResize = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -219,6 +221,9 @@ const ImageResize = () => {
             </div>
           )}
         </div>
+
+        {/* SEO Content Section */}
+        <ToolContent toolData={imageResizeContent} />
       </div>
     </Layout>
   );
