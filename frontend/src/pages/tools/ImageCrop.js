@@ -226,6 +226,11 @@ const ImageCrop = () => {
             </div>
           )}
         </div>
+
+        {/* SEO Content Section */}
+        <div className="max-w-6xl mx-auto">
+          <ToolContent toolData={imageCropContent} />
+        </div>
       </div>
     </Layout>
   );

@@ -272,6 +272,11 @@ const BackgroundRemover = () => {
             </div>
           )}
         </div>
+
+        {/* SEO Content Section */}
+        <div className="max-w-6xl mx-auto">
+          <ToolContent toolData={backgroundRemoverContent} />
+        </div>
       </div>
     </Layout>
   );
