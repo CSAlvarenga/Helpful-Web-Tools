@@ -1,6 +1,8 @@
 import { useState, useRef } from "react";
 import Layout from "../../components/Layout";
 import { Upload, Download, RefreshCw } from "lucide-react";
+import ToolContent from "../../components/ToolContent";
+import { formatConverterContent } from "../../data/toolContent";
 
 const FormatConverter = () => {
   const [selectedFile, setSelectedFile] = useState(null);

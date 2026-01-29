@@ -2,6 +2,8 @@ import { useState, useRef } from "react";
 import Layout from "../../components/Layout";
 import { QrCode as QrCodeIcon } from "lucide-react";
 import { QRCodeCanvas } from 'qrcode.react';
+import ToolContent from "../../components/ToolContent";
+import { qrGeneratorContent } from "../../data/toolContent";
 
 const QRGenerator = () => {
   const [text, setText] = useState('');

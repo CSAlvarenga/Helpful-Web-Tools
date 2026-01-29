@@ -2,6 +2,8 @@ import { useState, useRef } from "react";
 import Layout from "../../components/Layout";
 import { Upload, Download, FilePlus, X, Loader2 } from "lucide-react";
 import { PDFDocument } from 'pdf-lib';
+import ToolContent from "../../components/ToolContent";
+import { pdfMergeContent } from "../../data/toolContent";
 
 const PDFMerge = () => {
   const [selectedFiles, setSelectedFiles] = useState([]);

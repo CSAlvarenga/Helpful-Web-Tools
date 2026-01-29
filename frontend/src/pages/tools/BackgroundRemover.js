@@ -2,6 +2,8 @@ import { useState, useRef } from "react";
 import Layout from "../../components/Layout";
 import { Upload, Download, Wand2, Loader2 } from "lucide-react";
 import axios from "axios";
+import ToolContent from "../../components/ToolContent";
+import { backgroundRemoverContent } from "../../data/toolContent";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;

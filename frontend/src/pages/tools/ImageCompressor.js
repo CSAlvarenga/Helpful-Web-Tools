@@ -2,6 +2,8 @@ import { useState, useRef } from "react";
 import Layout from "../../components/Layout";
 import { Upload, Download } from "lucide-react";
 import imageCompression from 'browser-image-compression';
+import ToolContent from "../../components/ToolContent";
+import { imageCompressorContent } from "../../data/toolContent";
 
 const ImageCompressor = () => {
   const [selectedFile, setSelectedFile] = useState(null);
