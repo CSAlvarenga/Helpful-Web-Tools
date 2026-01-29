@@ -114,6 +114,11 @@ const WordCounter = () => {
             )}
           </div>
         </div>
+
+        {/* SEO Content Section */}
+        <div className="max-w-4xl mx-auto">
+          <ToolContent toolData={wordCounterContent} />
+        </div>
       </div>
     </Layout>
   );

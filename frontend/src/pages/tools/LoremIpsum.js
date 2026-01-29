@@ -129,6 +129,11 @@ const LoremIpsum = () => {
             )}
           </div>
         </div>
+
+        {/* SEO Content Section */}
+        <div className="max-w-4xl mx-auto">
+          <ToolContent toolData={loremIpsumContent} />
+        </div>
       </div>
     </Layout>
   );
