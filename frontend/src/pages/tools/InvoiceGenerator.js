@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Layout from "../../components/Layout";
 import { jsPDF } from "jspdf";
-import { Download, Plus, Trash2 } from "lucide-react";
+import { Download, Plus, Trash2, Upload, X } from "lucide-react";
 import ToolContent from "../../components/ToolContent";
 import { invoiceGeneratorContent } from "../../data/toolContent";
 
 const InvoiceGenerator = () => {
+  const [logo, setLogo] = useState(null);
+  const logoInputRef = useRef(null);
   const [invoiceData, setInvoiceData] = useState({
     invoiceNumber: `INV-${Date.now()}`,
     date: new Date().toISOString().split('T')[0],
@@ -19,6 +21,28 @@ const InvoiceGenerator = () => {
     items: [{ description: '', quantity: 1, rate: 0 }],
     notes: ''
   });
+
+  const handleLogoUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      if (file.size > 2 * 1024 * 1024) {
+        alert('Logo file size should be less than 2MB');
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        setLogo(event.target.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const removeLogo = () => {
+    setLogo(null);
+    if (logoInputRef.current) {
+      logoInputRef.current.value = '';
+    }
+  };
 
   const addItem = () => {
     setInvoiceData({
