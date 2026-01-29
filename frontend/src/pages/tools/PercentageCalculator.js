@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Layout from "../../components/Layout";
 import { Calculator } from "lucide-react";
+import ToolContent from "../../components/ToolContent";
+import { percentageCalculatorContent } from "../../data/toolContent";
 
 const PercentageCalculator = () => {
   const [calcType, setCalcType] = useState("whatIs"); // whatIs, isWhatPercent, percentChange
