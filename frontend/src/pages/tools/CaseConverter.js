@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Layout from "../../components/Layout";
 import { Type } from "lucide-react";
+import ToolContent from "../../components/ToolContent";
+import { caseConverterContent } from "../../data/toolContent";
 
 const CaseConverter = () => {
   const [text, setText] = useState('');

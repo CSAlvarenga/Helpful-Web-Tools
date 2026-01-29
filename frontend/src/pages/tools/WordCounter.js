@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Layout from "../../components/Layout";
 import { Calculator } from "lucide-react";
+import ToolContent from "../../components/ToolContent";
+import { wordCounterContent } from "../../data/toolContent";
 
 const WordCounter = () => {
   const [text, setText] = useState('');

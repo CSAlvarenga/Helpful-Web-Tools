@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Layout from "../../components/Layout";
 import { Lock, Copy } from "lucide-react";
+import ToolContent from "../../components/ToolContent";
+import { passwordGeneratorContent } from "../../data/toolContent";
 
 const PasswordGenerator = () => {
   const [password, setPassword] = useState('');

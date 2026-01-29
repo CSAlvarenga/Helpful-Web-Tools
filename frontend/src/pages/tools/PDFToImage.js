@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import Layout from "../../components/Layout";
 import { Upload, Download, Image as ImageIcon, Loader2 } from "lucide-react";
 import * as pdfjsLib from 'pdfjs-dist';
+import ToolContent from "../../components/ToolContent";
+import { pdfToImageContent } from "../../data/toolContent";
 
 const PDFToImage = () => {
   const [selectedFile, setSelectedFile] = useState(null);

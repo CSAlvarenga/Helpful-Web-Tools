@@ -2,6 +2,8 @@ import { useState, useRef } from "react";
 import Layout from "../../components/Layout";
 import { Upload, Download, Scissors, Loader2, Info } from "lucide-react";
 import { PDFDocument } from 'pdf-lib';
+import ToolContent from "../../components/ToolContent";
+import { pdfSplitContent } from "../../data/toolContent";
 
 const PDFSplit = () => {
   const [selectedFile, setSelectedFile] = useState(null);

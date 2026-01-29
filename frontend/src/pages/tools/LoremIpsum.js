@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Layout from "../../components/Layout";
 import { AlignLeft, Copy } from "lucide-react";
+import ToolContent from "../../components/ToolContent";
+import { loremIpsumContent } from "../../data/toolContent";
 
 const LoremIpsum = () => {
   const [paragraphs, setParagraphs] = useState(3);
