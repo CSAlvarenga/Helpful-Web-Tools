@@ -20,6 +20,7 @@ import ESignature from "./pages/tools/ESignature";
 
 // Developer Tools
 import QRGenerator from "./pages/tools/QRGenerator";
+import CSSGradient from "./pages/tools/CSSGradient";
 
 // Text Tools
 import CaseConverter from "./pages/tools/CaseConverter";
