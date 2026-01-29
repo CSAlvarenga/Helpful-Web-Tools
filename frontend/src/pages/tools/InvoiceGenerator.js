@@ -73,12 +73,25 @@ const InvoiceGenerator = () => {
     const pageWidth = doc.internal.pageSize.width;
     let yPos = 20;
 
+    // Add logo if uploaded
+    if (logo) {
+      try {
+        doc.addImage(logo, 'AUTO', 20, yPos, 40, 40);
+        yPos += 45;
+      } catch (error) {
+        console.error('Error adding logo:', error);
+      }
+    }
+
     // Header
     doc.setFontSize(24);
     doc.setTextColor(0, 240, 255);
-    doc.text('INVOICE', pageWidth / 2, yPos, { align: 'center' });
+    doc.text('INVOICE', logo ? pageWidth - 20 : pageWidth / 2, logo ? 35 : yPos, { align: logo ? 'right' : 'center' });
     
-    yPos += 15;
+    if (!logo) {
+      yPos += 15;
+    }
+    
     doc.setFontSize(10);
     doc.setTextColor(100, 100, 100);
     doc.text(`Invoice #: ${invoiceData.invoiceNumber}`, 20, yPos);
