@@ -206,6 +206,11 @@ const DiscountCalculator = () => {
             </div>
           </div>
         </div>
+
+        {/* SEO Content Section */}
+        <div className="max-w-3xl mx-auto">
+          <ToolContent toolData={discountCalculatorContent} />
+        </div>
       </div>
     </Layout>
   );

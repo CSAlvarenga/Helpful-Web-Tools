@@ -265,6 +265,11 @@ const LoanCalculator = () => {
             </div>
           </div>
         </div>
+
+        {/* SEO Content Section */}
+        <div className="max-w-5xl mx-auto">
+          <ToolContent toolData={loanCalculatorContent} />
+        </div>
       </div>
     </Layout>
   );
