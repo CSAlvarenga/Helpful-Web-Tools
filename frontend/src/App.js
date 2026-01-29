@@ -16,6 +16,7 @@ import InvoiceGenerator from "./pages/tools/InvoiceGenerator";
 import PDFMerge from "./pages/tools/PDFMerge";
 import PDFSplit from "./pages/tools/PDFSplit";
 import PDFToImage from "./pages/tools/PDFToImage";
+import ESignature from "./pages/tools/ESignature";
 
 // Developer Tools
 import QRGenerator from "./pages/tools/QRGenerator";
