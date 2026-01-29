@@ -170,6 +170,11 @@ const ImageCompressor = () => {
             </div>
           )}
         </div>
+
+        {/* SEO Content Section */}
+        <div className="max-w-4xl mx-auto">
+          <ToolContent toolData={imageCompressorContent} />
+        </div>
       </div>
     </Layout>
   );

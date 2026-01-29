@@ -133,6 +133,11 @@ const QRGenerator = () => {
             </div>
           </div>
         </div>
+
+        {/* SEO Content Section */}
+        <div className="max-w-4xl mx-auto">
+          <ToolContent toolData={qrGeneratorContent} />
+        </div>
       </div>
     </Layout>
   );
