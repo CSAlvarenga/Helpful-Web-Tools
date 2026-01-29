@@ -238,6 +238,11 @@ const FormatConverter = () => {
             </div>
           )}
         </div>
+
+        {/* SEO Content Section */}
+        <div className="max-w-4xl mx-auto">
+          <ToolContent toolData={formatConverterContent} />
+        </div>
       </div>
     </Layout>
   );
