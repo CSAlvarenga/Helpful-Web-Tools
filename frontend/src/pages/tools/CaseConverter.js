@@ -91,6 +91,11 @@ const CaseConverter = () => {
             )}
           </div>
         </div>
+
+        {/* SEO Content Section */}
+        <div className="max-w-4xl mx-auto">
+          <ToolContent toolData={caseConverterContent} />
+        </div>
       </div>
     </Layout>
   );
