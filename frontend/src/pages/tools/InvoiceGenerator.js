@@ -340,6 +340,11 @@ const InvoiceGenerator = () => {
             </button>
           </div>
         </div>
+
+        {/* SEO Content Section */}
+        <div className="max-w-4xl mx-auto">
+          <ToolContent toolData={invoiceGeneratorContent} />
+        </div>
       </div>
     </Layout>
   );
