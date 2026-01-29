@@ -1387,3 +1387,78 @@ export const youtubeThumbnailContent = {
     { name: "Format Converter", path: "/tools/format-converter" }
   ]
 };
+
+export const eSignatureContent = {
+  howTo: {
+    title: "How to Create a Digital Signature",
+    content: [
+      "Our free e-signature tool lets you create professional digital signatures instantly. Draw your signature using your mouse or finger, choose your preferred color, and download as a transparent PNG ready to use on any document.",
+    ],
+    steps: [
+      "Select your preferred signature color from the palette (white, cyan, orange, or blue)",
+      "Use your mouse (desktop) or finger (mobile/tablet) to draw your signature on the canvas",
+      "Take your time - you can clear and redraw as many times as needed",
+      "Click 'Download PNG' to save your signature with a transparent background",
+      "Use the downloaded signature in PDFs, Word docs, or any digital document"
+    ]
+  },
+  features: {
+    title: "E-Signature Features",
+    content: [
+      "Digital signatures are essential for modern document workflows. Our tool creates high-quality, professional signatures that can be used across all your digital documents without any software installation.",
+    ],
+    list: [
+      "Transparent PNG output - signature floats perfectly on any document",
+      "Multiple color options for different document styles",
+      "Works on all devices - desktop, tablet, and smartphone",
+      "High-resolution output for professional quality",
+      "Touch-optimized for natural signature feel on mobile",
+      "No account required - create signatures instantly",
+      "Complete privacy - signatures are never stored on servers",
+      "Smooth line rendering for realistic signature appearance"
+    ]
+  },
+  faq: [
+    {
+      question: "Is an e-signature legally binding?",
+      answer: "In many jurisdictions, electronic signatures are legally equivalent to handwritten signatures for most documents. However, some documents (wills, certain real estate transactions) may still require wet ink signatures. Check your local laws for specific requirements."
+    },
+    {
+      question: "Why is the background transparent?",
+      answer: "A transparent background allows your signature to blend seamlessly into any document without a white box appearing around it. This gives a more professional appearance when signing digital documents."
+    },
+    {
+      question: "Can I use this signature for official documents?",
+      answer: "Yes, for most everyday business documents, contracts, and agreements. The signature you create is a valid representation of your intent to sign. For highly regulated industries or government documents, verify specific requirements."
+    },
+    {
+      question: "How do I add this signature to a PDF?",
+      answer: "Download your signature PNG, then use a PDF editor (Adobe Acrobat, Preview on Mac, or online PDF tools) to insert the image at the signature line. The transparent background ensures it looks natural."
+    },
+    {
+      question: "Is my signature data stored anywhere?",
+      answer: "No. All signature creation happens entirely in your browser. Nothing is uploaded to any server. When you close the page, the signature data is completely gone unless you downloaded it."
+    }
+  ],
+  tips: {
+    title: "Tips for Better Digital Signatures",
+    content: [
+      "Creating an effective digital signature requires a bit of practice. Follow these tips for professional-looking results:"
+    ],
+    list: [
+      "Sign at a natural speed - too slow makes shaky lines, too fast loses detail",
+      "Use a stylus on tablets for the most natural feel",
+      "On desktop, use smooth mouse movements rather than clicking and dragging",
+      "White signatures work best on dark documents, blue on light documents",
+      "Keep your signature consistent - practice a few times before the final version",
+      "Make it readable enough to identify but stylized enough to be unique",
+      "Consider signing larger than needed - you can always scale down the PNG",
+      "For touch devices, rest your palm on the screen for stability"
+    ]
+  },
+  relatedTools: [
+    { name: "Invoice Generator", path: "/tools/invoice-generator" },
+    { name: "PDF Merge", path: "/tools/pdf-merge" },
+    { name: "Password Generator", path: "/tools/password-generator" }
+  ]
+};
