@@ -66,7 +66,7 @@ function App() {
           
           {/* Developer Tools */}
           <Route path="/tools/qr-generator" element={<QRGenerator />} />
-          <Route path="/tools/css-gradient" element={<ComingSoon toolName="CSS Gradient Generator" />} />
+          <Route path="/tools/css-gradient" element={<CSSGradient />} />
           <Route path="/tools/json-formatter" element={<ComingSoon toolName="JSON Formatter" />} />
           <Route path="/tools/contrast-checker" element={<ComingSoon toolName="Contrast Checker" />} />
           
