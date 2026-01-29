@@ -234,9 +234,49 @@ const InvoiceGenerator = () => {
               <div className="p-6 bg-black/40 backdrop-blur-xl border border-white/10 rounded-lg">
                 <h3 className="text-xl font-heading font-bold mb-4">From</h3>
                 <div className="space-y-4">
+                  {/* Logo Upload */}
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Company Logo (Optional)</label>
+                    {!logo ? (
+                      <div
+                        onClick={() => logoInputRef.current?.click()}
+                        className="border-2 border-dashed border-white/20 rounded-lg p-4 text-center cursor-pointer hover:border-primary/50 transition-colors"
+                        data-testid="logo-upload-area"
+                      >
+                        <Upload className="w-8 h-8 mx-auto mb-2 text-muted-foreground" />
+                        <p className="text-sm text-muted-foreground">Click to upload logo</p>
+                        <p className="text-xs text-muted-foreground/60 mt-1">PNG, JPG up to 2MB</p>
+                      </div>
+                    ) : (
+                      <div className="relative inline-block">
+                        <img
+                          src={logo}
+                          alt="Company logo"
+                          className="max-h-20 rounded border border-white/10"
+                          data-testid="logo-preview"
+                        />
+                        <button
+                          onClick={removeLogo}
+                          className="absolute -top-2 -right-2 p-1 bg-red-500 rounded-full hover:bg-red-400 transition-colors"
+                          data-testid="remove-logo-button"
+                        >
+                          <X className="w-4 h-4" />
+                        </button>
+                      </div>
+                    )}
+                    <input
+                      ref={logoInputRef}
+                      type="file"
+                      accept="image/png,image/jpeg,image/jpg"
+                      onChange={handleLogoUpload}
+                      className="hidden"
+                      data-testid="logo-input"
+                    />
+                  </div>
+
                   <input
                     type="text"
-                    placeholder="Your Name"
+                    placeholder="Your Name / Company Name"
                     value={invoiceData.fromName}
                     onChange={(e) => setInvoiceData({...invoiceData, fromName: e.target.value})}
                     className="w-full bg-black/50 border border-white/10 focus:border-primary focus:ring-1 focus:ring-primary/50 text-white placeholder:text-white/30 rounded-sm px-4 py-2"
