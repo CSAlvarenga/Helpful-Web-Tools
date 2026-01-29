@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Layout from "../../components/Layout";
 import { Cake } from "lucide-react";
+import ToolContent from "../../components/ToolContent";
+import { ageCalculatorContent } from "../../data/toolContent";
 
 const AgeCalculator = () => {
   const [birthDate, setBirthDate] = useState("");

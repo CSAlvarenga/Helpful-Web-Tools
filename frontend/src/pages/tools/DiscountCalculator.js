@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Layout from "../../components/Layout";
 import { Tag, DollarSign } from "lucide-react";
+import ToolContent from "../../components/ToolContent";
+import { discountCalculatorContent } from "../../data/toolContent";
 
 const DiscountCalculator = () => {
   const [originalPrice, setOriginalPrice] = useState("");

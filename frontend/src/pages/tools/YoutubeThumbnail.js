@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Layout from "../../components/Layout";
 import { Youtube, Download, Link as LinkIcon } from "lucide-react";
+import ToolContent from "../../components/ToolContent";
+import { youtubeThumbnailContent } from "../../data/toolContent";
 
 const YoutubeThumbnail = () => {
   const [videoUrl, setVideoUrl] = useState("");

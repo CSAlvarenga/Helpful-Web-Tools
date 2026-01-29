@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Layout from "../../components/Layout";
 import { DollarSign, Percent, Calendar } from "lucide-react";
+import ToolContent from "../../components/ToolContent";
+import { loanCalculatorContent } from "../../data/toolContent";
 
 const LoanCalculator = () => {
   const [principal, setPrincipal] = useState(250000);

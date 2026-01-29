@@ -2,6 +2,8 @@ import { useState } from "react";
 import Layout from "../../components/Layout";
 import { jsPDF } from "jspdf";
 import { Download, Plus, Trash2 } from "lucide-react";
+import ToolContent from "../../components/ToolContent";
+import { invoiceGeneratorContent } from "../../data/toolContent";
 
 const InvoiceGenerator = () => {
   const [invoiceData, setInvoiceData] = useState({

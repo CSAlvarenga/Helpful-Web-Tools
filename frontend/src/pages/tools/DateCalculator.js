@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Layout from "../../components/Layout";
 import { Calendar } from "lucide-react";
+import ToolContent from "../../components/ToolContent";
+import { dateCalculatorContent } from "../../data/toolContent";
 
 const DateCalculator = () => {
   const [startDate, setStartDate] = useState("");
