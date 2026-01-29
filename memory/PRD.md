@@ -80,7 +80,7 @@ Build a modern website called "Helpful Web Tools" with the slogan "Your Swiss Ar
         │   └── toolContent.js (NEW - Content for all tools)
         ├── pages/
         │   ├── HomePage.js
-        │   └── tools/ (20 tool components)
+        │   └── tools/ (22 tool components)
         ├── App.js
         └── index.css
 ```
