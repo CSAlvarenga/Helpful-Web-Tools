@@ -1,14 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const Layout = ({ children }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
-  // Scroll to top when component mounts or children change
+  // Scroll to top only when route changes
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [children]);
+  }, [location.pathname]);
 
   const categories = [
     { name: "Image Tools", path: "/#image-tools" },
