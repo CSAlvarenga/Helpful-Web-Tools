@@ -223,6 +223,11 @@ const AgeCalculator = () => {
             </div>
           </div>
         </div>
+
+        {/* SEO Content Section */}
+        <div className="max-w-4xl mx-auto">
+          <ToolContent toolData={ageCalculatorContent} />
+        </div>
       </div>
     </Layout>
   );
